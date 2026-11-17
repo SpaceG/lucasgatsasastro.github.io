@@ -7,6 +7,8 @@ $lg-sand:  #c5bc9b;
 $lg-grey:  #8a8a8a;
 // One face for everything, like lucasgatsas.ch
 $lg-font:  'Geist', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+$lg-ext-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 4h6v6'/%3E%3Cpath d='M20 4 11 13'/%3E%3Cpath d='M18 13.5V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5.5'/%3E%3C/svg%3E");
+
 $lg-serif: $lg-font;   // titles
 $lg-sans:  $lg-font;   // body text and labels
 
@@ -115,3 +117,40 @@ img + em,
 
 // ---- Single post title: smaller ----
 .post-title { font-size: 32px; }
+
+
+// ---- Text links: thin rule instead of a full underline, arrow when the
+//      link leaves the site. Same treatment as lucasgatsas.ch.
+.post__content,
+.page__content,
+.author__job {
+  a {
+    color: $heading-color;
+    text-decoration: none;
+    border-bottom: 1px solid rgba($heading-color, .13);
+    transition: color .15s, border-color .15s;
+
+    &:hover {
+      color: rgba($heading-color, .4);
+      border-bottom-color: rgba($heading-color, .2);
+    }
+
+    // links wrapping an image keep no rule and no arrow
+    &:has(img) {
+      border-bottom: 0;
+      &::after { content: none; }
+    }
+  }
+
+  a[href^="http"]:not([href*="lucasgatsas.com"])::after {
+    content: "";
+    display: inline-block;
+    width: .72em;
+    height: .72em;
+    margin-left: 6px;
+    vertical-align: baseline;
+    background: currentColor;
+    -webkit-mask: $lg-ext-arrow center / contain no-repeat;
+            mask: $lg-ext-arrow center / contain no-repeat;
+  }
+}
