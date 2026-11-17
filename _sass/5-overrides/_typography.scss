@@ -16,7 +16,7 @@ $lg-sans:  $lg-font;   // body text and labels
   font-weight: 700;
   font-size: 28px;
   text-transform: none;
-  letter-spacing: .005em;
+  letter-spacing: normal;
   color: $heading-color;
   &:hover { color: $heading-color; }
 }
@@ -32,11 +32,21 @@ $lg-sans:  $lg-font;   // body text and labels
 }
 
 // ---- Hero (name + tagline) ----
-.author .author__name { font-family: $lg-serif; font-weight: 400; font-size: 22px; margin-bottom: 8px; }
+.author .author__name { font-family: $lg-serif; font-weight: 700; font-size: 22px; margin-bottom: 8px; }
 .author .author__job  {
   font-family: $lg-serif; font-weight: 400;
   font-size: 17px; line-height: 1.4;
   max-width: 560px; margin-bottom: 24px;
+}
+
+// ---- Headings inside the article body ----
+// The theme leaves these at the browser default; the rules above only
+// reach titles that carry their own class.
+.post__content {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $lg-serif;
+    font-weight: 700;
+  }
 }
 
 // ---- Titles: bold everywhere ----
