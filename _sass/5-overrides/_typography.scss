@@ -10,15 +10,15 @@ $lg-font:  'Geist', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, 
 $lg-serif: $lg-font;   // titles
 $lg-sans:  $lg-font;   // body text and labels
 
-// ---- Logo: text (sand) instead of the PNG ----
+// ---- Logo: text instead of the PNG ----
 .logo__link {
   font-family: $lg-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 28px;
   text-transform: none;
   letter-spacing: .005em;
-  color: $lg-sand;
-  &:hover { color: $lg-sand; }
+  color: $heading-color;
+  &:hover { color: $heading-color; }
 }
 .footer-logo {
   font-family: $lg-serif;
@@ -39,7 +39,7 @@ $lg-sans:  $lg-font;   // body text and labels
   max-width: 560px; margin-bottom: 24px;
 }
 
-// ---- Titles: regular weight everywhere ----
+// ---- Titles: bold everywhere ----
 .article__title,
 .post-title,
 .page-title,
@@ -51,7 +51,7 @@ $lg-sans:  $lg-font;   // body text and labels
 .search-results__item .result-title,
 .no-results h3 {
   font-family: $lg-serif;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 blockquote {
