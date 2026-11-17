@@ -5,10 +5,12 @@
 
 $lg-sand:  #c5bc9b;
 $lg-grey:  #8a8a8a;
-$lg-serif: 'EB Garamond', Garamond, 'Times New Roman', serif;
-$lg-sans:  'Open Sans', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+// One face for everything, like lucasgatsas.ch
+$lg-font:  'Geist', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+$lg-serif: $lg-font;   // titles
+$lg-sans:  $lg-font;   // body text and labels
 
-// ---- Logo: text in Garamond (sand) instead of the PNG ----
+// ---- Logo: text (sand) instead of the PNG ----
 .logo__link {
   font-family: $lg-serif;
   font-weight: 400;
@@ -37,7 +39,7 @@ $lg-sans:  'Open Sans', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Ari
   max-width: 560px; margin-bottom: 24px;
 }
 
-// ---- Titles: Garamond regular everywhere ----
+// ---- Titles: regular weight everywhere ----
 .article__title,
 .post-title,
 .page-title,
@@ -60,7 +62,7 @@ blockquote {
   cite { font-family: $lg-sans; font-weight: 600; font-style: normal; }
 }
 
-// ---- Labels / meta: Open Sans, semibold instead of bold ----
+// ---- Labels / meta: semibold instead of bold ----
 .top-nav .nav__list .nav__item .nav__link,
 .mobile-nav .nav__list .nav__item .nav__link,
 .article__author-link,
@@ -82,7 +84,7 @@ blockquote {
   font-weight: 600;
 }
 
-// ---- Image captions: italic Garamond, grey, no caps (like lucasgatsas.ch) ----
+// ---- Image captions: italic, grey, no caps (like lucasgatsas.ch) ----
 img + em,
 .zoom-img-wrap + em,
 .gallery-box em {
