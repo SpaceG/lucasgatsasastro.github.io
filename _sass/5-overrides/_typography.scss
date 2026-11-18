@@ -154,3 +154,11 @@ img + em,
             mask: $lg-ext-arrow center / contain no-repeat;
   }
 }
+
+// ---- Article titles: tint on hover instead of the double underline ----
+// The theme draws two inset lines under the title. On the dark image cards
+// that reads as a scribble; a slight fade of the white says the same thing.
+.article__title a:hover {
+  box-shadow: none;
+  color: $gray-light-dark;
+}
